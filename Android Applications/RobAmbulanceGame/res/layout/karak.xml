@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <app.justlykbot.game.jeeblikarak.ArrowButton
+        android:id="@+id/rotateLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moveForward"
+        android:layout_toLeftOf="@+id/moveForward"
+        android:background="@drawable/left_background_selector" />
+
+    <app.justlykbot.game.jeeblikarak.ArrowButton
+        android:id="@+id/rotateRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/right_background_selector" />
+
+    <app.justlykbot.game.jeeblikarak.ArrowButton
+        android:id="@+id/moveForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rotateRight"
+        android:layout_toLeftOf="@+id/rotateRight"
+        android:background="@drawable/up_background_selector" />
+
+    <app.justlykbot.game.jeeblikarak.ArrowButton
+        android:id="@+id/moveBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rotateLeft"
+        android:layout_toRightOf="@+id/rotateLeft"
+        android:background="@drawable/down_background_selector" />
+
+    <Button
+        android:id="@+id/slow"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/moveBackward"
+        android:layout_alignLeft="@+id/medium"
+        android:textColor="@color/yellow"
+        android:text="@string/slow" />
+
+    <Button
+        android:id="@+id/medium"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/slow"
+        android:layout_alignLeft="@+id/faster"
+        android:textColor="@color/yellow"
+        android:text="@string/medium" />
+
+    <Button
+        android:id="@+id/faster"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/medium"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/yellow"
+        android:text="@string/fast" />
+
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/moveForward"
+        android:layout_alignBottom="@+id/moveForward"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:text="@string/speed"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/moveForward"
+        android:layout_toLeftOf="@+id/rotateLeft"
+        android:text="@string/title"
+        android:color="@color/dark_teal"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/timeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/moveForward"
+        android:layout_centerHorizontal="true"
+        android:text="counter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/timeRemainingString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timeRemaining"
+        android:layout_alignRight="@+id/timeRemaining"
+        android:text=""
+        android:gravity="right"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

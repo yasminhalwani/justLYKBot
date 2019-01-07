@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<results_table>
+	<row id="1">
+		<name>sip_test</name>
+		<function>sip</function>
+		<ipAddress>192.168.100.25</ipAddress>
+		<domain>trixbox1.localdomain</domain>
+		<port>5070</port>
+		<xcap_root></xcap_root>
+		<service></service>
+	</row>
+	<row id="2">
+		<name>xmpp_test</name>
+		<function>xmpp</function>
+		<ipAddress>192.168.100.25</ipAddress>
+		<domain>trixbox1.localdomain</domain>
+		<port>5222</port>
+		<xcap_root></xcap_root>
+		<service>192.168.100.25</service>
+	</row>
+	<row id="3">
+		<name>sip</name>
+		<function>sip</function>
+		<ipAddress>10.30.140.84</ipAddress>
+		<domain>trixbox1.localdomain</domain>
+		<port>5070</port>
+		<xcap_root></xcap_root>
+		<service></service>
+	</row>
+	<row id="4">
+		<name>xmpp</name>
+		<function>xmpp</function>
+		<ipAddress>10.30.140.84</ipAddress>
+		<domain>trixbox1.localdomain</domain>
+		<port>5222</port>
+		<xcap_root></xcap_root>
+		<service>10.30.140.70</service>
+	</row>
+</results_table>

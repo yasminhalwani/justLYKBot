@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results_table>
+	<row id="2">
+		<name>PotatoEater</name>
+		<displayPicture>potatoeater</displayPicture>
+		<package>org.farook.towerofhanoi</package>
+		<downloadURL>http://www.mediafire.com/file/x4r70fgeaeg6xr6/PotatoEater.apk</downloadURL>
+		<appName>otatoEater.apk</appName>
+		<description>Eat the potatoes!</description>
+		<extraInstruction>-</extraInstruction>
+	</row>
+</results_table>

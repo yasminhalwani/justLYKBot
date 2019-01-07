@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results_table>
+	<row id="1">
+		<owner>user1</owner>
+		<imageResourceId>R.drawable.robambulance</imageResourceId>
+		<name>RobAmbulance</name>
+		<displayPicture>robambulance</displayPicture>
+		<package>robambulance.main</package>
+		<downloadURL>http://www.mediafire.com/file/k39tbb5bse3jdrd/RobAmbulance.apk</downloadURL>
+		<appName>RobAmbulance.apk</appName>
+		<description>Follow the maze in the shortest time!</description>
+		<extraInstruction>-</extraInstruction>
+	</row>
+	<row id="2">
+		<owner>user1</owner>
+		<imageResourceId>R.drawable.potatoeater</imageResourceId>
+		<name>PotatoEater</name>
+		<displayPicture>potatoeater</displayPicture>
+		<package>org.farook.towerofhanoi</package>
+		<downloadURL>http://www.mediafire.com/file/x4r70fgeaeg6xr6/PotatoEater.apk</downloadURL>
+		<appName>potatoEater.apk</appName>
+		<description>Eat the potatoes!</description>
+		<extraInstruction>-</extraInstruction>
+	</row>
+</results_table>

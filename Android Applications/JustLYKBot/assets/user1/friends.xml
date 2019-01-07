@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<results_table>
+	<row id="1">
+		<username>GameZombie</username>
+		<imageResourceId>R.drawable.user2</imageResourceId>
+		<displayPicture>user2</displayPicture>
+		<sipId>20000</sipId>
+		<xmppId>user2</xmppId>
+	</row>
+	<row id="2">
+		<username>Greenbot</username>
+		<imageResourceId>R.drawable.user4</imageResourceId>
+		<displayPicture>user4</displayPicture>
+		<sipId>40000</sipId>
+		<xmppId>user4</xmppId>
+	</row>
+</results_table>

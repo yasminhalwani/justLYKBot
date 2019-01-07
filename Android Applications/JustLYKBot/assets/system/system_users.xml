@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results_table>
+	<row id="1">
+		<username>Bluebot</username>
+		<displayPicture>user1</displayPicture>
+		<sipId>10000</sipId>
+		<sipPass>12345</sipPass>
+		<xmppId>user1</xmppId>
+		<xmppPass>user1</xmppPass>
+	</row>
+	<row id="2">
+		<username>GameZombie</username>
+		<displayPicture>user2</displayPicture>
+		<sipId>20000</sipId>
+		<sipPass>12345</sipPass>
+		<xmppId>user2</xmppId>
+		<xmppPass>user2</xmppPass>
+	</row>
+	<row id="3">
+		<username>Silverfire11</username>
+		<displayPicture>user3</displayPicture>
+		<sipId>30000</sipId>
+		<sipPass>12345</sipPass>
+		<xmppId>user3</xmppId>
+		<xmppPass>user3</xmppPass>
+	</row>
+	<row id="4">
+		<username>Greenbot</username>
+		<displayPicture>user4</displayPicture>
+		<sipId>40000</sipId>
+		<sipPass>12345</sipPass>
+		<xmppId>user4</xmppId>
+		<xmppPass>user4</xmppPass>
+	</row>
+</results_table>

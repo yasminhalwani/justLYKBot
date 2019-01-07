@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results_table>
+	<row id="1">
+		<name>RobAmbulance</name>
+		<displayPicture>robambulance</displayPicture>
+		<package>robambulance.main</package>
+		<downloadURL>http://www.mediafire.com/file/k39tbb5bse3jdrd/RobAmbulance.apk</downloadURL>
+		<appName>RobAmbulance.apk</appName>
+		<description>Follow the maze in the shortest time!</description>
+		<extraInstruction>-</extraInstruction>
+	</row>
+</results_table>

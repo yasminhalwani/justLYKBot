@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<results_table> 
+    <row id="1">
+		<username>Bluebot</username>
+		<imageResourceId>R.drawable.user1</imageResourceId>
+		<displayPicture>user1</displayPicture>
+		<sipId>10000</sipId>
+		<xmppId>user1</xmppId>
+	</row>
+
+</results_table>

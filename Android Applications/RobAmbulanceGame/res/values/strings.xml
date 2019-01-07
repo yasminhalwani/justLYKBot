@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RobAmbulance!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="fast">Fast!</string>
+    <string name="medium">Medium</string>
+    <string name="slow">Slow :)</string>
+    
+    <string name="title">RobAmbulance</string>
+    
+    <string name="speed">Speed:</string>
+    
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_welcome">Welcome to RobAmbulance! Follow the below instructions to set up your robot:</string>
+    <string name="instructions1">1. Bring your BoeBot Robot</string>
+    <string name="instructions2">2. Turn it on</string>
+    <string name="instructions3">3. Fix the sensors over the start pattern</string>
+    <string name="instructions4">4. Click this button (The robot will move one step forward without making a beeping sound)</string>
+    <string name="instructions5">5. Move the vehicle till the end pattern!</string>
+    
+    <string name="yalla">Got it! Start!</string>
+    
+    <string name="time">Time Remaining:</string>
+    
+    <string name="score">You have reached your destination in</string>
+    <string name="second">Seconds</string>
+    
+    <string name="result_afa">You did not reach on time! :(</string>
+    <string name="result_ok">You have successfully finished the game! :)</string>
+    <string name="try_again">Try again!</string>
+    
+</resources>

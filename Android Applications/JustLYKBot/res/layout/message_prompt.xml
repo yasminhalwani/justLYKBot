@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_prompt"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/messagePrompt_TextView_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="100dp"
+    android:orientation="horizontal" >
+    
+        <Button
+        android:id="@+id/messagePrompt_Button_positiveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/message"
+        
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/messagePrompt_Button_negativeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:text="Button" />
+    </LinearLayout>
+
+
+</LinearLayout>

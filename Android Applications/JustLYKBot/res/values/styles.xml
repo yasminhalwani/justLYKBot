@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.Justlykbot" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_justlykbot</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Justlykbot</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Justlykbot</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Justlykbot</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Justlykbot</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Transparent.Justlykbot</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_justlykbot</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_justlykbot</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Justlykbot</item>
+        <item name="android:editTextStyle">@style/EditTextJustLYKBot</item>
+        <item name="android:buttonStyle">@style/ButtonJustLYKBot</item>
+         <item name="android:listViewStyle">@style/AppListView</item>
+    </style>
+
+    <style name="AppListView" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">@drawable/list_view_item</item>
+    </style>
+        
+    <style name="EditTextJustLYKBot" parent="android:Widget.EditText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">#002200</item>
+        <item name="android:textCursorDrawable">@drawable/green_cursor</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <style name="ButtonJustLYKBot" parent="android:Widget.Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">#00cc00</item>
+        <item name="android:animateOnClick">true</item>
+        <item name="android:minHeight">40dip</item>
+        <item name="android:minWidth">50dip</item>
+    </style>
+
+    <style name="ActionBar.Solid.Justlykbot" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_justlykbot</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_justlykbot</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_justlykbot</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Justlykbot</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Justlykbot" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_justlykbot</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Justlykbot</item>
+    </style>
+
+    <style name="PopupMenu.Justlykbot" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_justlykbot</item>
+    </style>
+
+    <style name="DropDownListView.Justlykbot" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_justlykbot</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Justlykbot" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_justlykbot</item>
+    </style>
+
+    <style name="DropDownNav.Justlykbot" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_justlykbot</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_justlykbot</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_justlykbot</item>
+    </style>
+
+    <style name="ProgressBar.Justlykbot" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_justlykbot</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Justlykbot" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_justlykbot</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Justlykbot.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Justlykbot</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Justlykbot</item>
+    </style>
+
+</resources>

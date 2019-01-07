@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<results_table>
+	<row id="1">
+		<sender>GameZombie</sender>
+		<receiver>Bluebot</receiver>
+		<date>3/5/2012</date>
+		<game>RobAmbulance</game>
+		<status>pending</status>
+	</row>
+	<row id="1">
+		<sender>Greenbot</sender>
+		<receiver>Bluebot</receiver>
+		<date>3/10/2013</date>
+		<game>PotatoEater</game>
+		<status>pending</status>
+	</row>
+
+</results_table>

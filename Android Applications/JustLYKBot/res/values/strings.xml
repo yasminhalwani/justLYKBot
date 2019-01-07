@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Other -->
+    <string name="action_settings">Settings</string>
+    <string name="add">.... Add ?</string>
+    <string name="static_data_error">Unable to perform this operation with static data</string>
+    <string name="message_yes">yes</string>
+    <string name="message_no">no</string>
+    <string name="message_ok">ok</string>
+    <string name="message_cancel">cancel</string>
+
+    <!-- Login -->
+    <string name="app_name">JustLYKBot</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="login_user1">Test User 1</string>
+    <string name="login_user2">Test User 2</string>
+    <string name="incorrect_login">Incorrect username/password. Please try again.</string>
+    <string name="game_server_down">Game server is down. Would you like to demo the app with static data instead?</string>
+    <string name="ok">OK</string>
+
+    <!-- Tabs -->
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Games</string>
+    <string name="title_section3">Friends</string>
+    <string name="title_section4">Profile</string>
+
+    <!-- Home Tab -->
+    <string name="welcome_message">Hello again!</string>
+    <string name="challenge_requests_yes">new challenge request(s)! :D</string>
+    <string name="friend_requests_yes">new friend request(s)! :D</string>
+    <string name="challenge_requests_no">No new challenge requests :(</string>
+    <string name="friend_requests_no">No new friend requests :(</string>
+    <string name="connection_error_xmpp">Could not connect to XMPP server. Please check preferences.</string>
+    <string name="connection_error_sip">Could not connect to SIP server. Please check preferences.</string>
+    <string name="connection_error_game">Could not connect to game server. Please check preferences.</string>
+    <string name="friend_request_prompt">Accept friend request?</string>
+
+    <!-- Profile Tab -->
+    <string name="no_trophies_message">Oops! You have no trophies yet. Time to play more JustLYKBot games!</string>
+    <string name="your_trophies">Your trophies:</string>
+    <string name="logout_button">Logout</string>
+    
+    <!-- Friends Tab -->
+    <string name="add_friend_message_dialog">Please insert the username below</string>
+    <string name="add_friend_message_dialog_title">Add new friend</string>
+    
+    <!-- Friend Profile -->
+    <string name="voip">Call</string>
+    <string name="im">IM</string>
+    <string name="unfriend">Unfriend</string>
+    
+    <!-- Friend Games -->
+    <string name="challenge_request_prompt">Would you like to send a challenge request?</string>
+
+    <!-- Games List -->
+    <string name="add_game_prompt">Add game?</string>
+    <string name="game_already_added">You already own this game!</string>
+    
+    <!-- Game Overview -->
+    <string name="no_instructions">No more instructions available for this game.</string>
+    <string name="start">Start!</string>
+    <string name="view_more">View More Instructons</string>
+    <string name="delete_game">Delete This Game</string>
+    
+    <!-- Load Game -->
+    <string name="would_you_like_to_install">was found in the app folder. Would you like to install it?</string>
+    <string name="would_you_like_to_download">was NOT found in the app folder. Would you like to download it?</string>
+    
+    
+    <!-- Users List -->
+    <string name="add_friend_prompt">Add as a friend?</string>
+    <string name="user_already_a_friend">This user is already in your friends list!</string>
+
+    <!-- Settings -->
+    <string name="different_sip">Different SIP Server</string>
+    <string name="different_xmpp">Different XMPP Server</string>
+    <string name="different_game">Different Game Server</string>
+    <string name="choose_sip">SIP Server Settings</string>
+    <string name="choose_xmpp">XMPP Server Settings</string>
+    <string name="choose_game">Game Server Settings</string>
+    <string name="no_sip_message">No SIP server connection settings detected. Would you like to set it up now?</string>
+    <string name="no_xmpp_message">No XMPP server connection settings detected. Would you like to set it up now?</string>
+    <string name="clear_settings">Clear Settings</string>
+    <string name="show_current_settings">Show Current Settings</string>
+    <string name="settings_cleared">SIP/XMPP Settings Cleared</string>
+    <string name="add_ip_address">Insert the server\'s IP address below</string>
+    <string name="add_ip_address_title">Add new server</string>
+    <string name="saved_to_preferences">Saved to preferences</string>
+    <string name="please_restart">Please restart the app for the changes to take effect.</string>
+    
+    
+    <!-- SIP Calls -->
+    <string name="incoming_call_notifiation">is trying to call you! Accept call?</string>
+    <string name="talking_to">Talking to ..</string>
+    <string name="hang_up">Hang Up</string>
+    
+    
+    
+</resources>

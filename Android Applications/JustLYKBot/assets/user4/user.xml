@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results_table>
+	<row id="1">
+		<username>Greenbot</username>
+		<imageResourceId>R.drawable.user4</imageResourceId>
+		<displayPicture>user4</displayPicture>
+		<sipId>40000</sipId>
+		<sipPass>12345</sipPass>
+		<xmppId>user4</xmppId>
+		<xmppPass>user4</xmppPass>
+	</row>
+</results_table>

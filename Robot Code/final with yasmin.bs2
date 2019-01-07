@@ -1,0 +1,217 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+counter VAR Word
+
+check VAR Word
+
+RX             PIN     2         ' RX of the Easy Bluetooth
+TX             PIN     0         ' TX of the Easy Bluetooth
+ltServo        PIN     13        ' Left Servo Pin
+rtServo        PIN     12        ' Right Servo Pin
+
+FwdLtFast      CON     850       ' Left servo forward full speed
+BwdLtFast      CON     650       ' Left servo backward full speed
+FwdRtFast      CON     650       ' Right servo forward full speed
+BwdRtFast      CON     850       ' Right servo backward full speed
+
+Baud           CON     84        ' Baud set at 9600
+
+myByte         VAR     Byte      ' Byte to establish connection
+index          VAR     Word      ' READ index/character storage
+character      VAR     Word
+dirChar        VAR     Word      ' Stores directional character
+shouldStop     VAR     Byte
+row1           VAR     Byte
+row2           VAR     Byte
+start          VAR     Byte
+
+qtis VAR Nib                  ' qti black/white states
+OUTB = %1111                  ' Set OUTB bits to 1
+
+DEBUG CRSRX, 8, "FMMF", CR,   ' Display bit positions
+      CRSRX, 8, "LLRR", CR
+
+'Check condition
+
+
+
+  DIRB = %1111                  ' P7..P4 -> output
+  PAUSE 0                       ' Delay = 230 us
+  DIRB = %0000                  ' P7..P4 -> input
+  PAUSE 0 ' Delay = 230 us
+  ' PULSOUT UnusedPin, 0        ' Delays = 208 + (Duration*2) us
+  qtis = INB ' Store QTI outputs in INB
+  DEBUG BIN4 ? qtis, CRSRUP
+
+  IF qtis=%1001 THEN
+  FOR counter=1 TO 2
+  PULSOUT 12, 650
+  PULSOUT 13, 850
+  PAUSE 20
+  NEXT
+ ' GOSUB start
+  ELSEIF qtis<>%1001 THEN
+  FREQOUT 10,2000,3000
+  DO
+  PAUSE 100
+  LOOP
+  ENDIF
+
+'start:
+'Move to Bluetooth Control
+DATA CLS,
+"              ", CR,            ' 14
+"              ", CR,            ' 28
+"       |      ", CR,            ' 42
+"     --o--    ", CR,            ' 56
+"       |      ", CR,            ' 70
+"              ", CR,            ' 84
+"              ", CR             ' 98
+
+PAUSE 250                        ' Waits 1/4 second
+SERIN RX, Baud, [myByte]         ' Waiting for byte
+myByte = 0                       ' Clear the byte value
+
+' Display background
+'FOR index = 0 TO 99
+'  READ index, character
+ ' SEROUT TX, Baud, [character]
+'NEXT
+
+' Let user know the program is running
+SEROUT TX, BAUD, [CR, CR, "K"]
+GOSUB Check_Start
+
+DO
+  ' Recieve character from the PC
+  SERIN RX, Baud, [dirChar]
+
+  IF (dirChar = "8") OR (dirChar = "w") THEN
+    GOSUB Forward
+  ELSEIF (dirChar = "2") OR (dirChar = "x") THEN
+    GOSUB Backward
+  ELSEIF (dirChar = "4") OR (dirChar = "a") THEN
+    GOSUB Left
+  ELSEIF (dirChar = "6") OR (dirChar = "d") THEN
+    GOSUB Right
+  ENDIF
+LOOP
+ RETURN
+'RETURN
+
+Forward:
+  GOSUB Check_Qtis
+ IF shouldStop=0 THEN
+
+  PULSOUT ltServo, FwdLtFast
+  PULSOUT rtServo, FwdRtFast
+
+  ENDIF
+  PAUSE 20
+ RETURN
+
+Backward:
+  GOSUB Check_Qtis
+  IF shouldStop=0 THEN
+
+  PULSOUT ltServo, BwdLtFast
+  PULSOUT rtServo, BwdRtFast
+  ENDIF
+
+  PAUSE 20
+
+RETURN
+
+Left:
+  'GOSUB Check_Qtis
+  'SEROUT TX, BAUD, [CRSRXY, 3, 3, "*", CRSRXY, 4, 2, "*", CRSRXY, 4, 4, "*"]
+  PULSOUT ltServo, FwdRtFast
+  PULSOUT rtServo, FwdRtFast
+  PAUSE 20
+ ' SEROUT TX, BAUD, [CRSRXY, 3, 3, " ", CRSRXY, 4, 2, " ", CRSRXY, 4, 4, " "]
+RETURN
+
+Right:
+ ' GOSUB Check_Qtis
+  'SEROUT TX, BAUD, [CRSRXY, 11, 3, "*", CRSRXY, 10, 2, "*", CRSRXY, 10, 4, "*"]
+  PULSOUT ltServo, FwdLtFast
+  PULSOUT rtServo, FwdLtFast
+  PAUSE 20
+  'SEROUT TX, BAUD, [CRSRXY, 11, 3, " ", CRSRXY, 10, 2, " ", CRSRXY, 10, 4, " "]
+RETURN
+
+
+Check_Qtis:
+' Result -> qtis variable. 0 means white surface, 1 means black
+' surface.
+
+  DIRB = %1111                  ' P7..P4 -> output
+  PAUSE 0                       ' Delay = 230 us
+  DIRB = %0000                  ' P7..P4 -> input
+  PAUSE 0 ' Delay = 230 us
+  ' PULSOUT UnusedPin, 0        ' Delays = 208 + (Duration*2) us
+  qtis = INB ' Store QTI outputs in INB
+  DEBUG BIN4 ? qtis, CRSRUP
+  IF qtis = %0000  THEN
+  shouldStop=1
+
+  ELSE
+  shouldStop=0
+   ENDIF
+
+  'Finish
+  IF qtis=%1010 THEN
+  FREQOUT 10,2000,3000
+  DO
+  PAUSE 100
+  LOOP
+  ENDIF
+
+
+  RETURN
+
+  Check_Start:
+
+
+  DIRB = %1111                  ' P7..P4 -> output
+  PAUSE 0                       ' Delay = 230 us
+  DIRB = %0000                  ' P7..P4 -> input
+  PAUSE 0 ' Delay = 230 us
+  ' PULSOUT UnusedPin, 0        ' Delays = 208 + (Duration*2) us
+  row1 = INB                    ' Store QTI outputs in INB
+
+  IF row1 = %0101  THEN
+    PULSOUT ltServo, FwdLtFast
+    PULSOUT rtServo, FwdRtFast
+    PULSOUT ltServo, FwdLtFast
+    PULSOUT rtServo, FwdRtFast
+
+    DIRB = %1111                  ' P7..P4 -> output
+    PAUSE 0                       ' Delay = 230 us
+    DIRB = %0000                  ' P7..P4 -> input
+    PAUSE 0 ' Delay = 230 us
+  ' PULSOUT UnusedPin, 0        ' Delays = 208 + (Duration*2) us
+    row2 = INB
+                     ' Store QTI outputs in
+     ENDIF
+  IF row2=%1010 THEN
+  PULSOUT ltServo, FwdLtFast
+  PULSOUT rtServo, FwdRtFast
+  PULSOUT ltServo, FwdLtFast
+    PULSOUT rtServo, FwdRtFast
+
+  DIRB = %1111                  ' P7..P4 -> output
+  PAUSE 0                       ' Delay = 230 us
+  DIRB = %0000                  ' P7..P4 -> input
+  PAUSE 0 ' Delay = 230 us
+  ' PULSOUT UnusedPin, 0        ' Delays = 208 + (Duration*2) us
+  start = INB          ' Store QTI outputs in INB
+  FREQOUT 10,2000,3000
+  ENDIF
+
+
+   SEROUT TX, Baud, [start]
+   DEBUG BIN4 ? start, CRSRUP
+
+
+   RETURN

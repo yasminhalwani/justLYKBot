@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+            <!-- SIP -->
+
+            <TextView
+                android:id="@+id/settings_textView_chooseSip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_sip" />
+
+            <ListView
+                android:id="@+id/settings_listView_sipServers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/settings_Button_connectToDifferentSip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/different_sip" />
+
+            <!-- XMPP -->
+
+            <TextView
+                android:id="@+id/settings_textView_chooseXmpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_xmpp" />
+
+            <ListView
+                android:id="@+id/settings_listView_xmppServers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/settings_Button_connectToDifferentXmpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/different_xmpp" />
+
+            <!-- Other Buttons -->
+
+            <Button
+                android:id="@+id/settings_Button_showCurrentSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/show_current_settings" />
+
+            <Button
+                android:id="@+id/settings_Button_clearSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_settings" />
+
+</LinearLayout>
